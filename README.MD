@@ -48,7 +48,7 @@ Once the application is running, access the Swagger UI at:
    git clone https://github.com/Alexei7ca/ecommerceApplication.git
 2. **Navigate to the project directory:**
    ```bash
-   cd ecommerce
+   cd ecommerceApplication
 3. **Build the project:**
    ```bash
    mvn clean install
