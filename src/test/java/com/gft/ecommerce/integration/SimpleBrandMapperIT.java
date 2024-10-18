@@ -1,13 +1,14 @@
-package com.gft.integration;
+package com.gft.ecommerce.integration;
 
-import com.decskill.ecommerce.domain.Brand;
-import com.decskill.ecommerce.dto.BrandDto;
-import com.decskill.ecommerce.mapper.SimpleBrandMapper;
+import com.gft.ecommerce.domain.Brand;
+import com.gft.ecommerce.dto.BrandDto;
+import com.gft.ecommerce.mapper.SimpleBrandMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SimpleBrandMapperIT {
 

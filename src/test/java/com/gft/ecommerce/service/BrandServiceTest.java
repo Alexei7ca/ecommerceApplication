@@ -1,7 +1,7 @@
-package com.gft.service;
+package com.gft.ecommerce.service;
 
-import com.decskill.ecommerce.domain.Brand;
-import com.decskill.ecommerce.repository.BrandRepository;
+import com.gft.ecommerce.domain.Brand;
+import com.gft.ecommerce.repository.BrandRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

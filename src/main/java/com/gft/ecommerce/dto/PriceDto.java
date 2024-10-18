@@ -1,4 +1,4 @@
-package com.gft.dto;
+package com.gft.ecommerce.dto;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.gft.service;
+package com.gft.ecommerce.service;
 
 import com.gft.ecommerce.domain.Brand;
 import com.gft.ecommerce.domain.Price;

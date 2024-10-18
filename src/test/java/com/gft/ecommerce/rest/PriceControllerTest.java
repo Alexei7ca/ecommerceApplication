@@ -1,9 +1,9 @@
-package com.gft.rest;
+package com.gft.ecommerce.rest;
 
-import com.decskill.ecommerce.domain.Brand;
-import com.decskill.ecommerce.domain.Price;
-import com.decskill.ecommerce.service.BrandServiceImpl;
-import com.decskill.ecommerce.service.PriceServiceImpl;
+import com.gft.ecommerce.domain.Brand;
+import com.gft.ecommerce.domain.Price;
+import com.gft.ecommerce.service.BrandServiceImpl;
+import com.gft.ecommerce.service.PriceServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 # eCommerce Project
 
 ## Overview
-This project is a demo eCommerce application developed as part of a technical assessment for a Java Developer position. It demonstrates my ability to implement key features of an eCommerce system using Java, Spring Boot, and other related technologies.
+This project is a demo eCommerce application developed as part of a technical assessment for a Java Developer position. It demonstrates my ability to implement key features of an eCommerce system using Java, Spring Boot, Docker and other related technologies.
 
 ## Features
 - **Product Management**: CRUD operations for managing product data.
@@ -18,6 +18,13 @@ The project follows a standard Maven structure:
     - `repository`: Data access layer using Spring Data JPA.
     - `model`: Entity classes representing the data model.
 - `src/main/resources`: Configuration files and application properties.
+
+## API Documentation
+The API is documented and can be explored via **Swagger UI**.
+
+Once the application is running, access the Swagger UI at:
+`http://localhost:8080/swagger-ui.html`
+
 ## API Endpoints
 - **GET /products: Retrieve all products.**
 - **POST /products: Add a new product.**
@@ -31,12 +38,14 @@ The project follows a standard Maven structure:
 - **Spring Data JPA**
 - **H2 Database**
 - **Lombok**
-- **Maven**
+- **Swagger** for API documentation
+- **Docker** for containerization
+- **Maven** for build automation
 
 ## Installation and Running
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Alexei7ca/ecommerce.git
+   git clone https://github.com/Alexei7ca/ecommerceApplication.git
 2. **Navigate to the project directory:**
    ```bash
    cd ecommerce
@@ -46,3 +55,20 @@ The project follows a standard Maven structure:
 4. **Run the application:**
    ```bash
    mvn spring-boot:run
+
+## Running with Docker
+### Prerequisites:
+Make sure Docker is installed and running on your machine. [Install Docker](https://docs.docker.com/get-docker/) if you haven't already.
+
+1. **Build the Docker Image**:
+   ```bash
+   docker build -t ecommerceapplication .
+2. **Run the Docker Container:**
+   ```bash
+   docker run -p 8080:8080 ecommerceapplication
+3. **Access Swagger UI:** Once the container is running, you can access the API documentation and test it using Swagger UI at:
+   ```bash
+   http://localhost:8080/swagger-ui.html
+
+## Testing 
+You can test the application by sending requests to the endpoints listed above or by using the Swagger UI.

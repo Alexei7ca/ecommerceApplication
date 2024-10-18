@@ -1,4 +1,4 @@
-package com.gft.service;
+package com.gft.ecommerce.service;
 
 import com.gft.ecommerce.domain.Brand;
 import com.gft.ecommerce.repository.BrandRepository;
@@ -22,6 +22,13 @@ public class BrandServiceImpl implements BrandService {
 
     public Brand getBrandByName(String name) {
         return brandsRepository.findByName(name);
+    }
+
+    public Brand saveBrand(Brand brand) {
+        if (brandsRepository.findByName(brand.getName()) != null) {
+            throw new IllegalArgumentException("Brand with name " + brand.getName() + " already exists");
+        }
+        return brandsRepository.save(brand);
     }
 
 }

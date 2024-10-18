@@ -1,46 +1,19 @@
 version: '3.8'
+
 services:
-
-#  SpringBoot app
-  employee-service-app:
-    container_name: 'employee-service-app'
-    build: ./
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
     environment:
-      - DB_SERVER=my-postgres-db
-      - POSTGRES_DB=employees
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
-    links:
-      - my-postgres-db
-      - my-activemq
-
-#DB
-  my-postgres-db:
-    image: postgres
-    container_name: 'my-postgres-container'
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:testdb
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD:
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.H2Dialect
+      SPRING_SQL_INIT_MODE: always
+      SPRING_SQL_INIT_SCHEMA_LOCATIONS: classpath:sql-scripts/schema.sql
+      SPRING_SQL_INIT_DATA_LOCATIONS: classpath:sql-scripts/test-data.sql
     volumes:
-      - employee-service-app-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-    environment:
-      - DB_SERVER=my-postgres-db
-      - POSTGRES_DB=employees
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-
-  my-activemq:
-    image: rmohr/activemq
-    container_name: 'my-activemq-container'
-    ports:
-      - "61616:61616"
-      - "8161:8161"
-    volumes:
-      - ~/Documents/data/activemq/data:/data/activemq
-      - ~/Documents/data/activemq/log:/var/log/activemq
-
-
-#Volumes for DB data
-volumes:
-  employee-service-app-data:
+      - ./sql-scripts:/app/sql-scripts

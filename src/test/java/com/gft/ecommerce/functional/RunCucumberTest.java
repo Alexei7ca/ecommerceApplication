@@ -1,4 +1,4 @@
-package com.gft.ecommerce;
+package com.gft.ecommerce.functional;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

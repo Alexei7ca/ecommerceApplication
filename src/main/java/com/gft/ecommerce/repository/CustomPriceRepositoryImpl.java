@@ -1,4 +1,4 @@
-package com.gft.repository;
+package com.gft.ecommerce.repository;
 
 import com.gft.ecommerce.domain.Brand;
 import com.gft.ecommerce.domain.Price;

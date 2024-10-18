@@ -1,4 +1,4 @@
-package com.gft.mapper;
+package com.gft.ecommerce.mapper;
 
 import com.gft.ecommerce.domain.Price;
 import com.gft.ecommerce.dto.PriceDto;

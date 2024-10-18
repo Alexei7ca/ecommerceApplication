@@ -1,4 +1,4 @@
-package com.gft.exception;
+package com.gft.ecommerce.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

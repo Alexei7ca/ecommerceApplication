@@ -1,9 +1,9 @@
-package com.gft.integration;
+package com.gft.ecommerce.integration;
 
-import com.decskill.ecommerce.domain.Brand;
-import com.decskill.ecommerce.domain.Price;
-import com.decskill.ecommerce.dto.PriceDto;
-import com.decskill.ecommerce.mapper.SimplePriceMapper;
+import com.gft.ecommerce.domain.Brand;
+import com.gft.ecommerce.domain.Price;
+import com.gft.ecommerce.dto.PriceDto;
+import com.gft.ecommerce.mapper.SimplePriceMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 
 import static java.lang.Double.valueOf;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SimplePricesMapperIT {
 

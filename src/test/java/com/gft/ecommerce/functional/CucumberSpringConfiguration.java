@@ -1,5 +1,6 @@
-package com.gft.ecommerce;
+package com.gft.ecommerce.functional;
 
+import com.gft.ecommerce.EcommerceApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 

@@ -1,12 +1,14 @@
-package com.gft.integration.repository;
+package com.gft.ecommerce.integration.repository;
 
-import com.decskill.ecommerce.domain.Brand;
-import com.decskill.ecommerce.repository.BrandRepository;
+import com.gft.ecommerce.domain.Brand;
+import com.gft.ecommerce.repository.BrandRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 public class BrandsRepositoryTest {
@@ -40,6 +42,15 @@ public class BrandsRepositoryTest {
     public void whenInvalidName_thenReturnNull() {
         Brand fromDb = brandsRepository.findByName("doesNotExist");
         assertThat(fromDb).isNull();
+    }
+
+    @Test
+    public void whenSaveBrand_thenBrandIsSaved() {
+        Brand savedBrand = brandsRepository.save(brand);
+
+        assertThat(savedBrand).isNotNull();
+        assertThat(savedBrand.getId()).isEqualTo(brand.getId());
+        assertThat(savedBrand.getName()).isEqualTo(brand.getName());
     }
 }
 

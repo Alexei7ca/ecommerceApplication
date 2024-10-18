@@ -1,4 +1,4 @@
-package com.gft.ecommerce;
+package com.gft.ecommerce.functional;
 
 import com.gft.ecommerce.dto.BrandDto;
 import io.cucumber.java.en.Given;

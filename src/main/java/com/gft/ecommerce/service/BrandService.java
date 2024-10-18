@@ -1,4 +1,4 @@
-package com.gft.service;
+package com.gft.ecommerce.service;
 
 import com.gft.ecommerce.domain.Brand;
 
@@ -9,4 +9,6 @@ public interface BrandService {
     List<Brand> getAllBrands();
 
     Brand getBrandByName(String name);
+
+    Brand saveBrand(Brand brand);
 }

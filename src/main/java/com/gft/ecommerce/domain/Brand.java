@@ -1,4 +1,4 @@
-package com.gft.domain;
+package com.gft.ecommerce.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
