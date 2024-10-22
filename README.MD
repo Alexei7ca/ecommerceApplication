@@ -1,7 +1,7 @@
 # eCommerce Project
 
 ## Overview
-This project is a demo eCommerce application developed as part of a technical assessment for a Java Developer position. It demonstrates my ability to implement key features of an eCommerce system using Java, Spring Boot, Docker and other related technologies.
+This project is a demonstration eCommerce application designed for a technical assessment for a Java Developer position. It showcases the implementation of key eCommerce system features using Java and Spring Boot, adhering to hexagonal architecture principles.
 
 ## Features
 - **Product Management**: CRUD operations for managing product data.
@@ -11,13 +11,13 @@ This project is a demo eCommerce application developed as part of a technical as
 - **REST API**: Exposes endpoints for interacting with the application’s features.
 
 ## Project Structure
-The project follows a standard Maven structure:
-- `src/main/java`: Contains the Java source code.
-    - `controller`: REST controllers for handling HTTP requests.
-    - `service`: Business logic layer.
-    - `repository`: Data access layer using Spring Data JPA.
-    - `model`: Entity classes representing the data model.
-- `src/main/resources`: Configuration files and application properties.
+This project follows a hexagonal architecture model to separate core logic from external interfaces:
+- `src/main/java/com/gft/ecommerce`
+    - **domain**: Contains business entities.
+    - **application**: Contains business logic and application services.
+    - **infrastructure**: Handles data access and external interfaces like web controllers.
+    - **shared**: contains common utilities.
+- `src/main/resources`: Contains configuration files and application properties.
 
 ## API Documentation
 The API is documented and can be explored via **Swagger UI**.
