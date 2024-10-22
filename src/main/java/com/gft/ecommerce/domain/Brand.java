@@ -1,23 +1,11 @@
 package com.gft.ecommerce.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@Entity
-@Table(name = "BRANDS")
+@Data
 public class Brand {
 
-    @Id
-    @Column(name = "ID")
-    private Integer id;
-
-    @Column(name = "NAME")
+    private int id;
     private String name;
 
 }

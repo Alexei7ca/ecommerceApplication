@@ -1,6 +1,6 @@
 package com.gft.ecommerce.functional;
 
-import com.gft.ecommerce.dto.BrandDto;
+import com.gft.ecommerce.domain.Brand;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +18,7 @@ public class StepDefinitions {
     private TestRestTemplate restTemplate;
 
     private ResponseEntity<String> response;
-    private ResponseEntity<BrandDto> brandResponse;
+    private ResponseEntity<Brand> brandResponse;
     private String brandName;
 
     @Given("the application is running")
@@ -88,8 +88,8 @@ public class StepDefinitions {
     public void the_following_brands_exist(List<String> expectedBrands) {
         for (String brandName : expectedBrands) {
             // Check if the brand already exists
-            ResponseEntity<BrandDto[]> response = restTemplate.getForEntity("/api/brands", BrandDto[].class);
-            List<BrandDto> brands = List.of(response.getBody());
+            ResponseEntity<Brand[]> response = restTemplate.getForEntity("/api/brands", Brand[].class);
+            List<Brand> brands = List.of(response.getBody());
 
             // If the brand doesn't exist, create it
             boolean brandExists = brands.stream().anyMatch(brand -> brand.getName().equals(brandName));
@@ -112,8 +112,8 @@ public class StepDefinitions {
     @Then("I should see the following brands:")
     public void i_should_see_the_following_brands(List<String> expectedBrands) {
         // Fetch the list of brands from the server
-        ResponseEntity<BrandDto[]> response = restTemplate.getForEntity("/api/brands", BrandDto[].class);
-        List<BrandDto> actualBrands = List.of(response.getBody());
+        ResponseEntity<Brand[]> response = restTemplate.getForEntity("/api/brands", Brand[].class);
+        List<Brand> actualBrands = List.of(response.getBody());
 
         for (String expectedBrand : expectedBrands) {
             boolean brandExists = actualBrands.stream().anyMatch(brand -> brand.getName().equals(expectedBrand));
@@ -125,7 +125,7 @@ public class StepDefinitions {
     // Scenario 4: Get a single brand by name
     @When("I request the brand details for {string}")
     public void i_request_the_brand_details_for(String brandName) {
-        brandResponse = restTemplate.getForEntity("/api/brands/" + brandName, BrandDto.class);
+        brandResponse = restTemplate.getForEntity("/api/brands/" + brandName, Brand.class);
 
         System.out.println("Brand response: " + brandResponse.getBody());
     }
@@ -133,7 +133,7 @@ public class StepDefinitions {
 
     @Then("the response should include the following brand details:")
     public void the_response_should_include_the_following_brand_details(Map<String, String> expectedDetails) {
-        BrandDto actualBrand = brandResponse.getBody();
+        Brand actualBrand = brandResponse.getBody();
 
         Assertions.assertNotNull(actualBrand, "The response body is null");
 
