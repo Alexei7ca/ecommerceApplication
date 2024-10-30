@@ -1,6 +1,6 @@
 package com.gft.ecommerce.infrastructure.adapter.in;
 
-import com.gft.ecommerce.application.port.in.InBrandService;
+import com.gft.ecommerce.domain.InBrandService;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.domain.Brand;
 import com.gft.ecommerce.infrastructure.mapper.SimpleBrandMapper;

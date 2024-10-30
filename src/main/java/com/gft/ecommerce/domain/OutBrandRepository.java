@@ -1,4 +1,4 @@
-package com.gft.ecommerce.application.port.out;
+package com.gft.ecommerce.domain;
 
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 

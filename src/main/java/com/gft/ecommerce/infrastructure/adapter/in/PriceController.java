@@ -1,12 +1,12 @@
 package com.gft.ecommerce.infrastructure.adapter.in;
 
-import com.gft.ecommerce.application.port.in.InBrandService;
+import com.gft.ecommerce.domain.InBrandService;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.PriceEntity;
 import com.gft.ecommerce.domain.Price;
 import com.gft.ecommerce.shared.exception.NotFoundException;
 import com.gft.ecommerce.infrastructure.mapper.SimplePriceMapper;
-import com.gft.ecommerce.application.port.in.InPriceService;
+import com.gft.ecommerce.domain.InPriceService;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

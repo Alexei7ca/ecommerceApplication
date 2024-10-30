@@ -1,6 +1,6 @@
 package com.gft.ecommerce.application.service;
 
-import com.gft.ecommerce.application.port.in.InPriceService;
+import com.gft.ecommerce.domain.InPriceService;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.PriceEntity;
 import com.gft.ecommerce.infrastructure.repository.PriceRepository;

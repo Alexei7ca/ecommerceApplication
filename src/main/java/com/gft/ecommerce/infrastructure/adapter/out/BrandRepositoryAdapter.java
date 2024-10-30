@@ -1,6 +1,6 @@
 package com.gft.ecommerce.infrastructure.adapter.out;
 
-import com.gft.ecommerce.application.port.out.OutBrandRepository;
+import com.gft.ecommerce.domain.OutBrandRepository;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.infrastructure.repository.BrandRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.gft.ecommerce.application.service;
 
-import com.gft.ecommerce.application.port.in.InBrandService;
+import com.gft.ecommerce.domain.InBrandService;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.infrastructure.repository.BrandRepository;
 import lombok.experimental.FieldDefaults;

@@ -1,6 +1,6 @@
 package com.gft.ecommerce.infrastructure.adapter.out;
 
-import com.gft.ecommerce.application.port.out.OutPriceRepository;
+import com.gft.ecommerce.domain.OutPriceRepository;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.BrandEntity;
 import com.gft.ecommerce.infrastructure.adapter.repository.entity.PriceEntity;
 import com.gft.ecommerce.infrastructure.repository.CustomPriceRepositoryImpl;
